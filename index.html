@@ -1,0 +1,220 @@
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>3DMedPT</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--    <link rel="icon" type="image/png" href="./index_files/images/icon.png">-->
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./index_files/codemirror.min.css">
+    <link rel="stylesheet" href="./index_files/app.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.min(1).css">
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS3QXR96SJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LS3QXR96SJ');
+    </script>
+
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./index_files/codemirror.min.js"></script>
+    <script src="./index_files/clipboard.min.js"></script>
+
+    <script src="./index_files/app.js"></script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                3D Medical Point Transformer: Introducing Convolution to Attention Networks for Medical Point Cloud Analysis
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        Jianhui Yu<sup>1</sup>
+                    </li>
+
+                    <li>
+                        <a href="https://chaoyivision.github.io/" target='_blank'>
+                          Chaoyi Zhang
+                        </a><sup>1</sup>
+                    </li>
+
+                    <li>
+                        <a href="https://www.researchgate.net/scientific-contributions/Heng-Wang-2152352972" target='_blank'>
+                          Heng Wang
+                        </a><sup>1</sup>
+                    </li>
+
+                    <li>
+                        <a target='_blank'>
+                          Dingxin Zhang
+                        </a><sup>1</sup>
+                    </li>
+
+                    <li>
+                        <a href="http://www.cse.unsw.edu.au/~ysong/" target='_blank'>
+                          Yang Song
+                        </a><sup>2</sup>
+                    </li>
+
+                    <li>
+                        <a href="https://tiangexiang.github.io/" target='_blank'>
+                          Tiange Xiang
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dongnan-liu.html" target='_blank'>
+                          Dongnan Liu
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/tom-cai.html" target='_blank'>
+                          Weidong Cai
+                        </a><sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>University of Sydney
+                    </li>
+                    <li>
+                        <sup>2</sup>University of New South Wales
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/pdf/2112.04863.pdf" target='_blank'>
+                            <img src="./images/cover_page.png" height="80px"><br>
+                                <h4><strong>Main Paper & Supp. Material</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/crane-papercode/3DMedPT" target='_blank'>
+                            <img src="./images/github_pad.png" height="80px"><br>
+                                <h4><strong>Code</strong></h4>
+                                <p style="color:blue;font-size:11px;">(available)</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#BibTeX">
+                            <img src="./images/bibtex.jpg" height="80px"><br>
+                                <h4><strong>BibTeX</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <img src="./images/model_details.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    General point clouds have been increasingly investigated for different tasks, and recently Transformer-based networks are proposed for point cloud analysis.
+                    However, there are barely related works for medical point clouds, which are important for disease detection and treatment.
+                    In this work, we propose an attention-based model specifically for medical point clouds, namely 3D medical point Transformer (3DMedPT), to examine the complex biological structures.
+                    By augmenting contextual information and summarizing local responses at query, our attention module can capture both local context and global content feature interactions.
+                    However, the insufficient training samples of medical data may lead to poor feature learning, so we apply position embeddings to learn accurate local geometry and Multi-Graph Reasoning (MGR) to examine global knowledge propagation over channel graphs to enrich feature representations.
+                    Experiments conducted on IntrA dataset proves the superiority of 3DMedPT, where we achieve the best classification and segmentation results.
+                    Furthermore, the promising generalization ability of our method is validated on general 3D point cloud benchmarks: ModelNet40 and ShapeNetPart.
+                    Code is released.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="dataset">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Highlights
+                </h3>
+                <p class="text-justify"> </p>
+                <ul>
+                    <li>
+                        State-of-the-art accuracy on IntrA classification: <b>0.936</b> (F1 score)
+                    </li>
+                    <li>
+                        State-of-the-art accuracy on IntrA segmentation:
+                        <ul>
+                            <li>
+                                IoU: <b>94.82%</b> on healthy vessel and <b>82.39%</b> on aneurysm
+                            </li>
+                            <li>
+                                DSC: <b>97.29%</b> on healthy vessel and <b>89.71%</b> on aneurysm
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        ModelNet40 classification: <b>93.4%</b>
+                    </li>
+                    <li>
+                        ShapeNet40 part segmentation: <b>84.3%</b> (class mIoU)
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="BibTeX">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+               If you find our project useful in your research, please cite:
+<pre class="w3-panel w3-leftbar w3-light-grey" style="font-family: monospace; font-size: 10px">
+@article{yu20213d,
+title={3D Medical Point Transformer: Introducing Convolution to Attention Networks for Medical Point Cloud Analysis},
+author={Yu, Jianhui and Zhang, Chaoyi and Wang, Heng and Zhang, Dingxin and Song, Yang and Xiang, Tiange and Liu, Dongnan and Cai, Weidong},
+journal={arXiv preprint arXiv:2112.04863},
+year={2021}
+}</pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                The website template was borrowed from <a href="https://sggpoint.github.io/" target='_blank'>Chaoyi Zhang's project</a>.
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
