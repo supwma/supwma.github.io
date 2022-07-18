@@ -46,7 +46,7 @@
     <div class="container" id="main">
         <div class="row">
             <h1 class="col-md-12 text-center">
-                SupWMA: Consistent and Efficient Tractography Parcellation of Superficial White Matter with Deep Learning
+                Superficial White Matter Analysis: An Efficient Point-cloud-based Deep Learning Framework with Supervised Contrastive Learning for Consistent Tractography Parcellation across Populations and dMRI Acquisitions
             </h1>
         </div>
         <div class="row">
@@ -81,7 +81,7 @@
                     <li>
                         <a href="https://scholar.google.com/citations?user=gGTas20AAAAJ" target='_blank'>
                             Nikos Makris
-                        </a><sup>1</sup>
+                        </a><sup>1,4</sup>
                     </li>
 
                     <li>
@@ -117,6 +117,9 @@
                     <li>
                         <sup>3</sup>University of New South Wales
                     </li>
+                    <li>
+                        <sup>4</sup>Massachusetts General Hospital
+                    </li>
                 </ul>
             </div>
         </div>
@@ -130,12 +133,12 @@
                                 <h4><strong>Main Paper</strong></h4>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#video">
                             <img src="./images/youtube_icon_dark.png" height="80px"><br>
                                 <h4><strong>Video</strong></h4>
                             </a>
-                        </li>
+                        </li> -->
                          <li>
                             <a href="#dataset">
                             <img src="./images/data.png" height="80px"><br>
@@ -167,21 +170,14 @@
                 <h3>
                     Overview
                 </h3>
-                <img src="./images/v4_SupWMA_Overview.png" class="img-responsive" alt="overview"><br>
+                <img src="./images/Overview_v2.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                White matter parcellation classifies tractography streamlines into clusters or anatomically meaningful tracts to enable quantification
-                and visualization. Most parcellation methods focus on the deep white matter (DWM), while fewer methods address the superficial white matter (SWM)
-                due to its complexity. We propose a deep-learning-based framework, Superficial White Matter Analysis (SupWMA), that performs an efficient and
-                consistent parcellation of 198 SWM clusters from whole-brain tractography. A point-cloud-based network is modified for our SWM parcellation task,
-                and supervised contrastive learning enables more discriminative representations between plausible streamlines and outliers. We perform evaluation
-                on a large tractography dataset with ground truth labels and on three independently acquired testing datasets from individuals across ages and
-                health conditions. Compared to several state-of-the-art methods, SupWMA obtains a highly consistent and accurate SWM parcellation result. In addition,
-                the computational speed of SupWMA is much faster than other methods.
+                    Diffusion MRI tractography is an advanced imaging technique that enables in vivo mapping of the brain’s white matter connections. White matter parcellation classifies tractography streamlines into clusters or anatomically meaningful tracts. It enables quantification and visualization of whole-brain tractography. Currently, most parcellation methods focus on the deep white matter (DWM), whereas fewer methods address the superficial white matter (SWM) due to its complexity. We propose a novel two-stage deep-learning-based framework, Superficial White Matter Analysis (SupWMA), that performs an efficient and consistent parcellation of 198 SWM clusters from whole-brain tractography. A point-cloud-based network is adapted to our SWM parcellation task, and supervised contrastive learning enables more discriminative representations between plausible streamlines and outliers for SWM. We train our model on a large-scale tractography dataset including streamline samples from labeled SWM clusters and anatomically implausible streamline samples, and we perform testing on six independently acquired datasets of different ages and health conditions (including neonates and patients with space-occupying brain tumors). Compared to several state-of-the-art methods, SupWMA obtains highly consistent and accurate SWM parcellation results on all datasets, showing good generalization across the lifespan in health and disease. In addition, the computational speed of SupWMA is much faster than other methods.
                 </p>
             </div>
         </div>
 
-        <div class="row" id="video">
+        <!-- <div class="row" id="video">
             <div class="col-md-8 col-md-offset-2">
                 <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
                 <div class="text-center">
@@ -190,7 +186,7 @@
                 </iframe>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
             <div class="row" id="dataset">
