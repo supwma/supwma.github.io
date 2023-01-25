@@ -142,7 +142,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <ul class="nav-pills nav-justified">
                         <li>
-                            <a href="https://arxiv.org/pdf/2207.08975.pdf" target='_blank'>
+                            <a href="https://arxiv.org/abs/2207.08975" target='_blank'>
                             <img src="./images/cover_page.png" height="80px"><br>
                                 <h4><strong>Main Paper</strong></h4>
                                 <!-- <p style="color:blue;font-size:11px;">(coming soon)</p> -->
@@ -187,7 +187,7 @@
                 </h3>
                 <img src="./images/Overview_v2.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
-                    Diffusion MRI tractography is an advanced imaging technique that enables in vivo mapping of the brain’s white matter connections. White matter parcellation classifies tractography streamlines into clusters or anatomically meaningful tracts. It enables quantification and visualization of whole-brain tractography. Currently, most parcellation methods focus on the deep white matter (DWM), whereas fewer methods address the superficial white matter (SWM) due to its complexity. We propose a novel two-stage deep-learning-based framework, Superficial White Matter Analysis (SupWMA), that performs an efficient and consistent parcellation of 198 SWM clusters from whole-brain tractography. A point-cloud-based network is adapted to our SWM parcellation task, and supervised contrastive learning enables more discriminative representations between plausible streamlines and outliers for SWM. We train our model on a large-scale tractography dataset including streamline samples from labeled SWM clusters and anatomically implausible streamline samples, and we perform testing on six independently acquired datasets of different ages and health conditions (including neonates and patients with space-occupying brain tumors). Compared to several state-of-the-art methods, SupWMA obtains highly consistent and accurate SWM parcellation results on all datasets, showing good generalization across the lifespan in health and disease. In addition, the computational speed of SupWMA is much faster than other methods.
+                    Diffusion MRI tractography is an advanced imaging technique that enables in vivo mapping of the brain's white matter connections. White matter parcellation classifies tractography streamlines into clusters or anatomically meaningful tracts. It enables quantification and visualization of whole-brain tractography. Currently, most parcellation methods focus on the deep white matter (DWM), whereas fewer methods address the superficial white matter (SWM) due to its complexity. We propose a novel two-stage deep-learning-based framework, Superficial White Matter Analysis (SupWMA), that performs an efficient and consistent parcellation of 198 SWM clusters from whole-brain tractography. A point-cloud-based network is adapted to our SWM parcellation task, and supervised contrastive learning enables more discriminative representations between plausible streamlines and outliers for SWM. We train our model on a large-scale tractography dataset including streamline samples from labeled long- and medium-range (over 40 mm) SWM clusters and anatomically implausible streamline samples, and we perform testing on six independently acquired datasets of different ages and health conditions (including neonates and patients with space-occupying brain tumors). Compared to several state-of-the-art methods, SupWMA obtains highly consistent and accurate SWM parcellation results on all datasets, showing good generalization across the lifespan in health and disease. In addition, the computational speed of SupWMA is much faster than other methods.
                 </p>
             </div>
         </div>
@@ -230,11 +230,12 @@
                 </h3>
                If you find our project useful in your research, please cite:
 <pre class="w3-panel w3-leftbar w3-light-grey" style="font-family: monospace; font-size: 10px">
-@article{xue2022superficial,
-    title={Superficial White Matter Analysis: An Efficient Point-cloud-based Deep Learning Framework with Supervised Contrastive Learning for Consistent Tractography Parcellation across Populations and dMRI Acquisitions},
-    author={Xue, Tengfei and Zhang, Fan and Zhang, Chaoyi and Chen, Yuqian and Song, Yang and  Golby, Alexandra J. and Makris, Nikos and Rathi, Yogesh and Cai, Weidong and O'Donnell, Lauren J},
-    journal={arXiv preprint arXiv:2207.08975},
-    year={2022}
+@article{XUE2023102759,
+    title = {Superficial white matter analysis: An efficient point-cloud-based deep learning framework with supervised contrastive learning for consistent tractography parcellation across populations and dMRI acquisitions},
+    author = {Tengfei Xue and Fan Zhang and Chaoyi Zhang and Yuqian Chen and Yang Song and Alexandra J. Golby and Nikos Makris and Yogesh Rathi and Weidong Cai and Lauren J. O'Donnell},
+    journal = {Medical Image Analysis},
+    year = {2023},
+    doi = {https://doi.org/10.1016/j.media.2023.102759}
     }
 
 @INPROCEEDINGS{xue2022supwma,
